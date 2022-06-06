@@ -962,8 +962,6 @@ include_once('koneksi.php');
                                                     <!-- <div class="wdp-form-field-submit"> -->
                                                     <button name='submit' type="submit" class="form-button">
                                                         Kirim Ucapan </button>
-                                                    <input name='submit' class="btn btn-primary shadow my-4" value='➤ Kirim Ucapan' type='submit' />
-
                                                     <!-- </div> -->
                                                 </div>
                                             </form>
@@ -1025,42 +1023,36 @@ include_once('koneksi.php');
                                         <div class='wdp-wrap-link'><a><i aria-hidden='true' class='fas fa-dove'> </i>
                                                 <span><?= count($dataucapan); ?></span> Ucapan</a></div>
                                         <!--.wdp-wrap-link-->
-                                        <div class='wdp-wrap-comments'>
+                                        <!-- <div class='wdp-wrap-comments'> -->
+                                        <div class=''>
 
                                             <!--.wdp-wrap-form-->
-                                            <div class='wdp-comment'></div>
-                                            <ul class='wdp-container-comments'>
-                                                ss
+                                            <!-- <div class='wdp-comment'></div> -->
+                                            <ul style="text-decoration: none !important; max-height: 250px !important; " >
                                                 <?php
                                                 foreach ($dataucapan as $data => $displayUcapan) {
                                                 ?>
-                                                    <li class="comment even thread-even depth-1 saic-item-comment">
-                                                        <div id="saic-comment-42013" class="saic-comment saic-clearfix">
-                                                            <div class="saic-comment-avatar">
-                                                                <img src="https://i1.wp.com/foreverr.id/s/img/foreverr-avatar.png">
+                                                    <li style="text-decoration: none !important; overflow: hidden;" >
+                                                        <div style="display: flex !important;">
+                                                            <div style="display: flex; align-items: center;margin-right: 20px;">
+                                                                <img src="<?=$json['thumb']?>" style="max-width: 40px !important; justify-items: center;">
                                                             </div>
                                                             <!--.saic-comment-avatar-->
-                                                            <div class="saic-comment-content">
-                                                                <div class="saic-comment-info">
-                                                                    <a class='saic-commenter-name' title='<?= $displayUcapan['author'] ?>'><?= $displayUcapan['author'] ?></a>
-                                                                    <span class=saic-post-author><i class="fas fa-check-circle"></i><?= $displayUcapan['konfirmasi'] ?></span>
+                                                            <div>
+                                                                <div>
+                                                                    <a title='<?= $displayUcapan['author'] ?>'><?= $displayUcapan['author'] ?></a>
                                                                     <br>
-                                                                    <span class="saic-comment-time">
+                                                                    <span>
                                                                         <i class="far fa-clock"></i>
-                                                                        <?= $displayUcapan['tanggal'] ?> </span>
+                                                                        <?= ' '.$displayUcapan['tanggal'] ?> </span>
                                                                 </div>
                                                                 <!--.saic-comment-info-->
-                                                                <div class="saic-comment-text">
+                                                                <div>
                                                                     <p><?= $displayUcapan['comment'] ?></p>
                                                                 </div>
-                                                                <!--.saic-comment-text-->
-                                                                <div class="saic-comment-actions">
-                                                                </div>
-                                                                <!--.saic-comment-actions-->
                                                             </div>
                                                             <!--.saic-comment-content-->
                                                         </div>
-                                                        <!--.saic-comment-->
                                                         <!--</li>-->
                                                     </li><!-- #comment-## -->
 
